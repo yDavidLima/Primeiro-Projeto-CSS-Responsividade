@@ -1,0 +1,179 @@
+*{font-family: 'Montserrat', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;}  /*  "Border sizing" com "border-box" é uma técnica de layout em CSS que altera a maneira como a largura e altura de um elemento são calculadas quando a borda e o preenchimento são aplicados a ele.
+
+                                            O modelo padrão de caixa em CSS é o modelo de conteúdo,
+                                             onde a largura e altura de um elemento são calculadas apenas em relação ao conteúdo do elemento, sem levar em consideração a borda e o preenchimento aplicados a ele. 
+                                             Isso pode causar problemas de layout, especialmente quando se usa valores em porcentagem para definir a largura ou altura de um elemento, pois a largura ou 
+                                             altura real pode acabar sendo maior do que o esperado, devido à adição da borda e do preenchimento.
+
+                                            Ao usar a propriedade "box-sizing" com o valor "border-box", 
+                                            a largura e altura do elemento agora são calculadas levando em consideração a borda e o preenchimento aplicados a ele, além do conteúdo. Isso significa que, 
+                                            quando você define a largura ou altura de um elemento usando valores em porcentagem, o tamanho real do elemento será a porcentagem especificada menos a largura da borda e o preenchimento. */
+
+
+.tela{ 
+    height: 100vh;      /* Aqui no vamos garantir que a nossa div(tela) ocupe todo o espaço da tela.
+                        vh e vw é a nossa tela, no caso estamos falando para ele ocupar todos o 100 pedaços da nossa tela. */ 
+    width: 100vw;
+
+}
+
+.container-left{
+    display: inline-block; /* Estamos usando isso para que o elemento fique um do lado do outro.
+                            O valor "inline-block" da propriedade "display" no CSS é utilizado para exibir elementos HTML como um bloco retangular, mas ainda permitindo que outros elementos sejam posicionados ao lado dele na mesma linha, como se fosse um elemento "inline".
+
+                            Com "display: inline-block", é possível aplicar propriedades de bloco, como largura, altura, margem e preenchimento, e ainda manter a capacidade de adicionar outros elementos na mesma linha. Isso pode ser útil em situações em que se deseja posicionar vários elementos juntos, 
+                            mas ainda quer permitir que eles sejam exibidos em uma linha horizontal. */
+    width: 60%; /* Ele vai cobrir 60% da parte equerda da tela pq ele ocupa um espaço mair. */
+    margin-top: 20%;
+    padding-left: 136px;
+
+
+
+
+
+}
+
+
+
+
+
+.container-right{   
+    display: inline-block;  
+    background: rgba(93, 93, 125, 0.16); /* aqui nos usamos essa propriedade rgbA para colocarmos o opacity nó na caixa azul e nao nos demais itens. */
+    height: 110vh;
+    width: 40%;
+    position: absolute; }
+
+img{ position: relative;
+    top:15%;
+    right: 130px;}
+
+
+h1{font-weight: 400;
+    font-size: 70px;
+    line-height: 80px;
+    color: #5D5D7D;
+    width: 368px;
+height: 160px;
+
+}
+
+
+p{font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+    opacity: 0.6;
+    margin: 15px 0;
+    width: 540px;
+height: 144px;
+
+    
+    
+    color: #5D5D7D;}
+
+button{font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    
+    color: #FFFFFF;width: 269px;
+    height: 62px;
+    
+    background: #9499EA;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    width: 269px;
+    height: 62px;}
+
+button:hover{opacity: 0.8;} /* Toda vez que eu passo o mouser por cima do botão e fica mais claro.*/
+
+
+
+button:active{ /* Toda vez que eu clico no botão ele fica mais claro ainda. Quando eu realizo uma ação. */
+    opacity: 0.5;
+}    
+
+a{font-weight: 400;
+    font-size: 28px;
+    line-height: 41px;
+    cursor: pointer;
+
+    color: #5D5D7D;
+    margin-right: 41px;
+}
+a:nth-child(2){
+    opacity: 0.4;
+}
+a:hover{opacity: 0.4;}
+a:active{opacity:0.8}
+
+header{margin: 24px 0 0 57px;}
+
+
+/*    AGORA VAMOS APLICAR A RESPONSIVIDADE PARA O NOSSO SITE SE ADAPTAR PARA CELULAR */
+
+@media screen and (max-width: 1000px)
+{ .container-left{ 
+    width: 100%;
+    height: 50%;
+    padding: 0;
+    margin: 0;}   
+
+    .container-right {
+        display: block;
+        height: auto;
+        width: 100%;
+        position: static;
+        padding: 40px;}
+    
+    img{position: static;
+        max-width: 90%;}    
+    header{ display: none   ;}
+
+   h1{font-size: 36px;
+    line-height: 52px;
+    margin: 58px 50px 0 50px;
+    width: auto;
+    text-align: center;}     
+
+    p{font-size: 14px;
+        line-height: 24px;
+        margin: 15px 40px;
+        width: auto; 
+        text-align: center;
+        position: relative;
+        bottom: 50px;}
+    
+    
+        button{ margin: 0 auto;
+            display: block;
+            position: relative;
+            bottom: 110px;
+    
+    }
+
+        
+
+
+
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
